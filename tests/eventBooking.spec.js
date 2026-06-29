@@ -5,7 +5,6 @@ import { BookingPage } from '../pages/booking.page';
 import { futureDateValue } from '../utils/dateUtils';
 
 test('Event booking flow', async ({ page }) => {
-
   const login = new LoginPage(page);
   const event = new EventPage(page);
   const booking = new BookingPage(page);
@@ -22,7 +21,7 @@ test('Event booking flow', async ({ page }) => {
 
   await event.createEvent(title, date);
 
-  await expect(page.getByText('Event created!')).toBeVisible({timeout: 15000});
+  await expect(page.getByText('Event created!')).toBeVisible({ timeout: 15000 });
 
   await event.navigateToEvents();
 
