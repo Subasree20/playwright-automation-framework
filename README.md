@@ -1,6 +1,6 @@
 # Playwright Automation Framework
 
-This project demonstrates an end-to-end UI automation framework built using Playwright with JavaScript, following best practices such as Page Object Model (POM) and reusable test design. Includes an end-to-end booking flow with validation before and after booking
+This project demonstrates an end-to-end UI automation framework built using Playwright with JavaScript, following best practices such as Page Object Model (POM) and reusable test design. It includes an end-to-end booking flow with validation before and after booking.
 
 ---
 
@@ -25,28 +25,34 @@ This project demonstrates an end-to-end UI automation framework built using Play
 
 ## 📂 Project Structure
 
+```
 playwright-framework/
-├── tests/        # Test files
-├── pages/        # Page Object Model classes
-├── utils/        # Reusable utilities
-├── testdata/     # Test data files
+├── tests/        
+├── pages/        
+├── utils/        
+├── testdata/     
 ├── playwright.config.js
 └── package.json
+```
 
 ---
 
 ## ▶️ Run Tests
 
 Install dependencies:
+```
 npm install
+```
 
 Run tests:
+```
 npx playwright test
+```
 
 Run in headed mode:
+```
 npx playwright test --headed
-
-
+```
 ---
 
 ## 🔗 GitHub Repository
