@@ -1,3 +1,9 @@
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/login.page';
+import { EventPage } from '../pages/event.page';
+import { BookingPage } from '../pages/booking.page';
+import { futureDateValue } from '../utils/dateUtils';
+
 test('Event booking flow', async ({ page }) => {
 
   const login = new LoginPage(page);
