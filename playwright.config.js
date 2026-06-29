@@ -32,7 +32,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     
     baseURL: 'https://eventhub.rahulshettyacademy.com',
-    headless: true,
+    headless: process.env.CI ? true : false,,
     actionTimeout: 15000,
     screenshot: 'on',
     video: 'retain-on-failure',
