@@ -50,7 +50,6 @@ test('Event booking flow', async ({ page }) => {
   const seatsAfter = await event.getSeats(title);
   console.log("After booking:", seatsAfter);
 
-  // Add validation
-  expect(seatsAfter).toBeLessThanOrEqual(seatsBefore);
-
+  //expect(seatsAfter).toBeLessThanOrEqual(seatsBefore);
+  expect(seatsAfter).toBeLessThan(seatsBefore);
 });
