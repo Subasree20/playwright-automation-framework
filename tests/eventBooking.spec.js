@@ -22,6 +22,7 @@ test('Event booking flow', async ({ page }) => {
 
   await event.createEvent(title, date);
 
+  //await expect(page.getByText('Event created!')).toBeVisible({ timeout:15000 });
   await expect(page.getByText('Event created!')).toBeVisible({ timeout: 15000 });
 
   await event.navigateToEvents();
