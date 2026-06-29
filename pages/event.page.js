@@ -11,8 +11,8 @@ export class EventPage {
     await this.page.locator("textarea[rows='3']").fill("Test description");
     await this.page.getByLabel('city').fill('Chennai');
     await this.page.getByLabel('venue').fill('T Nagar');
-    await this.page.locator("#event-date-&-time").fill(date);
-    await this.page.locator("#price-($)").fill('1500');
+    await this.page.locator("//input[@id='event-date-&-time']").fill(date);
+    await this.page.locator("//input[@id='price-($)']").fill('1500');
     await this.page.getByPlaceholder('e.g. 500').fill('50');
 
     await this.page.locator('#add-event-btn').click();
@@ -23,4 +23,27 @@ export class EventPage {
     const text = await card.locator("//*[text()=' seats available']").innerText();
     return parseInt(text.match(/\d+/)[0], 10);
   }
+
+  
+async navigateToEvents() {
+  await this.page.locator("#nav-events").click();
+  await this.page.waitForLoadState('networkidle');
+  await this.page.waitForSelector("[data-testid='event-card']");
+}
+
+async getEventCard(title) {
+  return this.page.locator(`[data-testid='event-card']:has-text("${title}")`);
+}
+
+async getSeats(title) {
+  const card = await this.getEventCard(title);
+  const text = await card.locator("//*[text()=' seats available']").innerText();
+  return parseInt(text.match(/\d+/)[0], 10);
+}
+
+async clickBookNow(title) {
+  const card = await this.getEventCard(title);
+  await card.locator("a:has-text('Book Now')").click();
+}
+
 }
