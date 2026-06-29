@@ -16,7 +16,7 @@ test('Event booking flow', async ({ page }) => {
   const date = futureDateValue();
   const title = `Test Event ${date}`;
 
-  await page.goto('/'); // ✅ Works only if baseURL is set
+  await page.goto('/'); // Works only if baseURL is set
 
   await login.login(email, password);
 
