@@ -1,6 +1,6 @@
 # Playwright Automation Framework
 
-This project demonstrates an end-to-end UI automation framework built using Playwright with JavaScript, following best practices such as Page Object Model (POM) and reusable test design. Includes end-to-end booking flow with validation before and after booking
+This project demonstrates an end-to-end UI automation framework built using Playwright with JavaScript, following best practices such as Page Object Model (POM) and reusable test design. Includes an end-to-end booking flow with validation before and after booking
 
 ---
 
