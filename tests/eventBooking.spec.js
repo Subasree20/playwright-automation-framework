@@ -22,7 +22,7 @@ test('Event booking flow', async ({ page }) => {
 
   await event.createEvent(title, date);
 
-  await expect(page.getByText('Event created!')).toBeVisible({ timeout: 15000 });
+  await expect(page.getByText('Event created!')).toBeVisible({timeout: 15000});
 
   await event.navigateToEvents();
 
@@ -49,7 +49,7 @@ test('Event booking flow', async ({ page }) => {
   const seatsAfter = await event.getSeats(title);
   console.log("After booking:", seatsAfter);
 
-  // ✅ Add validation
+  // Add validation
   expect(seatsAfter).toBeLessThanOrEqual(seatsBefore);
 
 });
