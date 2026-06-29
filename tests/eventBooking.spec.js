@@ -4,6 +4,7 @@ import { EventPage } from '../pages/event.page';
 import { BookingPage } from '../pages/booking.page';
 import { futureDateValue } from '../utils/dateUtils';
 
+//test('Event booking flow', async ({ page }) => {
 test('Event booking flow', async ({ page }) => {
   const login = new LoginPage(page);
   const event = new EventPage(page);
