@@ -1,17 +1,70 @@
 # Playwright Automation Framework
 
-This project demonstrates UI automation using Playwright with JavaScript.
+This project demonstrates an end-to-end UI automation framework built using Playwright with JavaScript, following best practices such as Page Object Model (POM) and reusable test design. Includes end-to-end booking flow with validation before and after booking
 
-## Features
-- Page Object Model (POM)
-- End-to-End Test (Event Booking Flow)
-- Reusable Utilities
-- Structured Framework
+---
 
-## Tech Stack
+## 🚀 Features
+
+- End-to-End automation for real-time scenarios (Event Booking Flow)
+- Page Object Model (POM) implemented for maintainability
+- Reusable utilities and modular structure
+- API validation support
+- Assertions and validations for UI testing
+
+---
+
+## 🛠️ Tech Stack
+
 - Playwright
-- JavaScript
-- Node.js
+- JavaScript (Node.js)
+- Postman (API Testing)
+- Git & GitHub
 
-## Run Tests
+---
+
+## 📂 Project Structure
+
+playwright-framework/
+├── tests/        # Test files
+├── pages/        # Page Object Model classes
+├── utils/        # Reusable utilities
+├── testdata/     # Test data files
+├── playwright.config.js
+└── package.json
+
+---
+
+## ▶️ Run Tests
+
+Install dependencies:
+npm install
+
+Run tests:
 npx playwright test
+
+Run in headed mode:
+npx playwright test --headed
+
+
+---
+
+## 🔗 GitHub Repository
+
+https://github.com/Subasree20/playwright-automation-framework
+
+---
+
+## 📌 Future Enhancements
+
+- CI/CD integration using GitHub Actions
+- Parallel execution
+- Enhanced reporting dashboard
+
+---
+
+## 👩‍💻 Author
+
+Subasree K J  
+QA Automation Engineer | Playwright | JavaScript
+
